@@ -38,14 +38,14 @@ const LoginPage = () => {
           <div className="mb-4 flex items-center justify-start gap-2">
             <ShipWheelIcon className="size-9 text-primary" />
             <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
-              Streamify
+              CHATTIFY
             </span>
           </div>
 
           {/* ERROR MESSAGE DISPLAY */}
           {error && (
             <div className="alert alert-error mb-4">
-              <span>{error.res.data.message}</span>
+              <span>{error.response?.data?.message || error.message || "Something went wrong"}</span>
             </div>
           )}
 
